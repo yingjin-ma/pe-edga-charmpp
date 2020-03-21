@@ -1,0 +1,57 @@
+mainmodule EDGA_charmc
+{
+    include "DetObjectSTL.h";
+    include "ckio.h";
+    include "vector";
+
+//    readonly CProxy_Main mainProxy;
+    readonly int nElements;
+    readonly int numQueens;
+    readonly int initial_grainsize;
+    readonly int numDets;
+    readonly int nsite_mps;
+    readonly int nloops_main;
+//    readonly int iflag_txt;
+    readonly std::string tmp_folder; 
+
+    readonly int nele_alpha;
+    readonly int nele_beta;
+    readonly int nhole_alpha;
+    readonly int nhole_beta;
+    readonly int nele_total;
+    readonly int igroup_sym;
+    readonly double CI_completeness;
+    readonly double CI_threshold;
+    readonly double mutation_ratio;
+
+    mainchare Main{
+      entry Main(CkArgMsg *msg);
+      entry [reductiontarget] void report_coeff2(double result);
+      entry [reductiontarget] void report_coeff(double result);
+      entry [reductiontarget] void finished();
+      };
+
+    array [1D] DetCharmClass{
+      entry DetCharmClass();
+      entry void cktest(double TL1[numDets]);
+      entry void mps2ci(const std::vector<std::vector<ChargeCharm>> &inDets, const MPSCharm &inMPS, int nchares, int nlop, int nmod);
+      entry void monte_carlo(const std::vector<std::vector<ChargeCharm>> &inDets, const MPSCharm &inMPS, int nchares, int nlop, int nmod, int icycle);
+      entry void genetic(const std::vector<std::vector<ChargeCharm>> &inDets, const MPSCharm &inMPS, int nchares, int nlop, int nmod, int icycle, int nitvl);
+      entry void Ent_genetic(const std::vector<std::vector<ChargeCharm>> &inDets, const MPSCharm &inMPS, int nchares, int nlop, int nmod, int icycle, int nitvl, std::vector<std::vector<double>> EntMat);
+//      entry void monte_carlo2(const std::vector<std::vector<ChargeCharm>> &inDets, const MPSCharm &inMPS, std::vector<ResultCharm> out);
+//      entry [reductiontarget] void report_coeff(double result);
+      entry [reductiontarget] void report_coeff2(double result);
+    };
+
+//    entry void start_write(Ck::IO::SessionReadyMsg *m);
+//    entry void test_written(CkReductionMsg *m);
+//    entry void closed(CkReductionMsg *m);
+//    entry void iterDone();
+
+    array [1D] SyncClass{
+      entry SyncClass();
+      entry void getCIs(double TL1[numDets]);
+    };
+
+};
+
