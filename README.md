@@ -1,4 +1,4 @@
-# PE-EDGA-Charm++ 
+# Population Expansion EDGA using Charm++ 
 
 ##In this version, the refactored MPS-to-CI, SR-CAS，and (PE)-EDGA charm++ codes should work together with QCMaquis.
 
