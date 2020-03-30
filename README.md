@@ -31,6 +31,7 @@
 
 ## Related paper
   + https://arxiv.org/abs/2003.10861
+  + by Ting Wang, Yingjin Ma, Lian Zhao, Jinrong Jiang
 
 ## Corresponding author
   + yingjin.ma@sccas.cn or yingjin_ma@163.com
