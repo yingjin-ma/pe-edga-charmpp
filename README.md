@@ -5,7 +5,7 @@
    1. copy FindCharm.cmake  into    [QCMaquis]/dmrg/config/
    2. copy others           into    [QCMaquis]/dmrg/applications/srcas/ or [QCMaquis]/dmrg/applications/tools/
      + Notice that the CMakeList.txt should be updated basing on CMakeLists_in_srcas_or_tool.txt)
-   3. And add the following into [QCMaquis]/dmrg/CMakeLists.txt before the "Version information"
+   3. And the following into [QCMaquis]/dmrg/CMakeLists.txt before the "Version information"
 
 ```
   set(CHARM_ROOT "/Location/of/charm/folder" CACHE STRINGS "Location of charm folder")
@@ -30,7 +30,7 @@
   + QCmaquis : https://reiher.ethz.ch/software/maquis.html
 
 ## Related paper
-  + to be updated soon
+  + https://arxiv.org/abs/2003.10861
 
 ## Corresponding author
   + yingjin.ma@sccas.cn or yingjin_ma@163.com
