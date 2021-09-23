@@ -33,5 +33,9 @@
   + https://doi.org/10.1002/jcc.26424
   + Ting Wang, Yingjin Ma*, Lian Zhao, Jinrong Jiang*, *J. Comput. Chem.* **41**, 2707-2721 (2020)
 
+## Software Series
+
+  This module belongs to the electronic Multi-Configurational (eMC) Package 
+
 ## Corresponding author
   + yingjin.ma@sccas.cn or yingjin_ma@163.com
